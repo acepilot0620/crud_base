@@ -27,8 +27,6 @@ def login(request):
             return render(request, 'login.html', {"error_msg":error_msg})
     return render(request,'login.html')
 
-
-
 # def main(request):
 #     if request.method == "POST":
 #         text = request.POST.get('text_input')
