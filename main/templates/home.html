@@ -8,7 +8,10 @@
 </head>
 <body>
     <h1>메인화면</h1>
+    {% if user.is_authenticated %}
     <p>{{now_account.nickname}}님 반갑습니다.</p>
+    {% endif %}
     <a href="{% url 'post_list' %}"><button>게시판</button></a>
+    <a href="{% url 'login' %}"><button>로그인</button></a>
 </body>
 </html>
