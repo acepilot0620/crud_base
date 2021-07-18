@@ -7,18 +7,8 @@
     <title>멋쟁이사자처럼</title>
 </head>
 <body>
-    <p>글자수 세기</p>
-    <form action="" method="POST">
-        {% csrf_token %}
-        <textarea name="user_input" id="" cols="30" rows="10">{{text}}</textarea>
-        <input type="submit" title="글자수 세기" >
-    </form>
-    {% if word_num %}
-    <h3>단어수 : {{word_num}}</h3>
-    {% else %}
-    <h3>결과 확인창</h3>
-    {% endif %}
-    <a href="{% url 'login' %}"><button>로그인</button></a>
-    <a href="{% url 'new_post' %}"><button>글쓰기</button></a>
+    <h1>메인화면</h1>
+    <p>{{now_account.nickname}}님 반갑습니다.</p>
+    <a href="{% url 'post_list' %}"><button>게시판</button></a>
 </body>
 </html>
